@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const HTML = () => {
+const HTML = (props) => {
   return (
-    <html {...this.props.htmlAttributes}>
+    <html {...props.htmlAttributes}>
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -11,9 +11,9 @@ const HTML = () => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {this.props.headComponents}
+        {props.headComponents}
       </head>
-      <body {...this.props.bodyAttributes} className="light">
+      <body {...props.bodyAttributes} className="light">
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -48,17 +48,19 @@ const HTML = () => {
           `,
           }}
         />
-        {this.props.preBodyComponents}
+        {props.preBodyComponents}
         <div
           key={`body`}
           id="___gatsby"
-          dangerouslySetInnerHTML={{ __html: this.props.body }}
+          dangerouslySetInnerHTML={{ __html: props.body }}
         />
-        {this.props.postBodyComponents}
+        {props.postBodyComponents}
       </body>
     </html>
   );
 }
+
+export default HTML;
 
 HTML.propTypes = {
   htmlAttributes: PropTypes.object,

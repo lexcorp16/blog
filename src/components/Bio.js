@@ -43,7 +43,13 @@ const Bio = () => {
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <p style={{ marginBottom: 0 }}>
           Personal blog by {` `}
-          <a href={`https://twitter.com/${social.twitter}`}>{author.name}</a>
+          <a
+            href={`https://twitter.com/${social.twitter}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {author.name}
+          </a>
         </p>
         <p style={{ margin: 'none' }}>{author.summary}</p>
       </div>

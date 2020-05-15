@@ -1,6 +1,6 @@
 ---
 title: Inversion of Control
-date: "2019-12-02T22:12:03.284Z"
+date: "2019-11-11T22:12:03.284Z"
 description: "Better APIs, better abstractions"
 ---
 
@@ -148,9 +148,11 @@ Say we have a `Button` component implemented like this;
 ```jsx
 import React from 'react';
 
-const Button = ({ text }) => (
-	<button>{text}</button>
-)
+const Button = ({ text }) => {
+  return (
+    <button>{text}</button>
+  )
+}
 
 export default Button;
 ```
@@ -161,12 +163,14 @@ And then we realise that some buttons can have font awesome icons. One way to ex
 ```js
 import React from 'react';
 
-const Button = ({ text, iconName = null }) => (
-	<button>
-		{text}
-		{iconName && <i className=`${iconName}`></i>}
-	</button>
-)
+const Button = ({ text, iconName = null }) => {
+	return (
+    <button>
+      {text}
+      {iconName && <i className=`${iconName}`></i>}
+    </button>
+  )
+}
 
 export default Button;
 
@@ -180,11 +184,13 @@ We can apply the principle of inversion of control to solve this same problem by
 ```jsx
 import React from 'react';
 
-const Button = ({ children }) => (
-	<button>
-		{children()}
-	</button>
-)
+const Button = ({ children }) => {
+  return (
+    <button>
+      {children()}
+    </button>
+  )
+}
 
 export default Button;
 

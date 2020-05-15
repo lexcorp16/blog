@@ -1,6 +1,6 @@
 ---
 title: State management in React
-date: "2019-12-02T22:12:03.284Z"
+date: "2019-11-20T22:12:03.284Z"
 description: "Is state management really such a big deal?"
 ---
 
@@ -63,9 +63,7 @@ A lot of React developers (myself included) think that the introduction of hooks
 
 The list goes on and on. Through the use of custom hooks we are able to achieve the same benefits as HOCs and Render props without any complicated syntax or new API.
 
-> _Sometimes, the elegant implementation is just a function. Not a method. Not a class. Not a framework. Just a function._
-
-John Carmack. Oculus VR CTO.
+> Sometimes, the elegant implementation is just a function. Not a method. Not a class. Not a framework. Just a function. *- John Carmack. Oculus VR CTO*.
 
 **Nice read on React Hooks:** [Why React Hooks?](https://tylermcginnis.com/why-react-hooks/)
 
